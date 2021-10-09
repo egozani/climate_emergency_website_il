@@ -1,6 +1,10 @@
 @import url("https://almoni.netlify.app/index.css");
 $body-background: #fafafa;
 $body-color: #444;
+$midRed: #FC6868;
+$mainColor: #E91D0E;
+$secondaryColor: white;
+$borderRadius: 5px;
 @import 'home.scss';
 *{
   margin: 0;
@@ -30,6 +34,7 @@ main {
 }
 button{
   font-family: 'Almoni', serif;
+  cursor: pointer;
 
 }
 nav{
@@ -48,12 +53,12 @@ nav{
     line-height: 4rem;
     text-decoration: none;
     color: black;
-    &:hover{
-      background-color: #FC6868;
-      color: $secondaryColor;
-    }
     &:first-child{
       background-color: $mainColor;
+    }
+    &:hover{
+      background-color: $midRed;
+      color: $secondaryColor;
     }
     &:last-child:hover{
       background-color: unset;

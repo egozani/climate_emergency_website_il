@@ -1,6 +1,6 @@
-$mainColor: #E91D0E;
-$secondaryColor: white;
-$borderRadius: 5px;
+// $mainColor: #E91D0E;
+// $secondaryColor: white;
+// $borderRadius: 5px;
 .chimney{
     position: absolute;
     top: 0;
@@ -52,15 +52,26 @@ $borderRadius: 5px;
         margin-bottom: 0.5rem;
         border-radius: $borderRadius;
         color: $secondaryColor;
-        cursor: pointer;
+        transition: all .2s ease ;
         
         &:nth-child(1){
           background-color: $mainColor;
           border: 3px solid $mainColor;
-        }&:nth-child(2){
+          &:hover{
+          background-color: $midRed;
+          }
+        }
+        &:nth-child(2){
           background-color: unset;
           border: 3px solid $secondaryColor;
         }
+        &:hover{
+          font-size: 2.5rem;
+          border-color: $midRed;
+        }
+      }
+      a{
+        text-decoration: none;
       }
     }
   }
