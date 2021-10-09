@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     text-align: end;
-    height: 100vh;
+    height: calc(100vh - 64px); // 100vh - 4rem of nav
     .landing-content{
       margin-right: 10%;
       display: flex;
@@ -43,41 +43,15 @@
         text-align: end;
         line-height: 6rem;
       }
-      button{
-        display: flex;
-        flex-direction: column;
-        width: 20rem;
-        line-height: 3rem;
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        border-radius: $borderRadius;
-        color: $secondaryColor;
-        transition: all .2s ease ;
-        
-        &:nth-child(1){
-          background-color: $mainColor;
-          border: 3px solid $mainColor;
-          &:hover{
-          background-color: $midRed;
-          }
-        }
-        &:nth-child(2){
-          background-color: unset;
-          border: 3px solid $secondaryColor;
-        }
-        &:hover{
-          font-size: 2.5rem;
-          border-color: $midRed;
-        }
-      }
-      a{
-        text-decoration: none;
-      }
+      
     }
   }
     #title{
       color: $secondaryColor;
       right: 20%;
+  }
+  h2{
+    font-size: 3rem;
   }
   #registration-form{
     position: absolute;
@@ -94,15 +68,81 @@
     input, button{
       width: 100%;
     }
-    button{
-      margin-top: 2rem;
-      background-color: $secondaryColor;
-      border-radius: $borderRadius;
-      line-height: 1.5rem;
-      border: 2px solid $secondaryColor;
-      outline: none;
-    }
     input{
       margin-bottom: 1rem;
+    }
+  }
+  #demands, #demonstrations, #about-crisis, #partners{
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  #demands{
+    align-items: flex-end;
+    justify-content: center;
+    #demands-content{
+      text-align: right;
+      margin-right: 10%;
+      h2{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+      }
+      p{
+        font-size: 2rem;
+      }
+    }
+  }
+  #demonstrations{
+    background-color: turquoise;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about-crisis{
+    align-items: center;
+    height: 200vh;
+    background-image: url('../../src/images/about-crisis-background.png');
+    h2{
+      margin-top: 8rem;
+    }
+    #about-crisis-content{
+      height: 100%;
+      width: 70%;
+    }
+    #about-crisis-content > div{
+      display: flex;
+      justify-content: center;
+      margin-top: 10rem;
+      .about-crisis-image{
+        width: 30rem;
+        height: 22rem;
+        margin-right: 2rem;
+      }
+      &:nth-child(2n){
+        div{
+        margin-right: 2rem;
+       }
+       .about-crisis-image{
+         margin-right: unset;
+       }
+      }
+    }
+  }
+  #partners{
+    h2{
+      margin-top: 8rem;
+      margin-right: 4rem;
+    }
+    #partner-icons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem 4rem;
+      .partner-icon{
+        height: 5rem;
+        // max-width: 8rem;
+      }
     }
   }

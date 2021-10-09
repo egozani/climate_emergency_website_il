@@ -32,10 +32,45 @@ main {
   // max-width: 60rem;
 
 }
+a{
+  text-decoration: none;
+}
 button{
   font-family: 'Almoni', serif;
   cursor: pointer;
-
+  margin-top: 2rem;
+  background-color: $secondaryColor;
+  border-radius: $borderRadius;
+  line-height: 1.5rem;
+  border: 2px solid $secondaryColor;
+  outline: none;
+}
+.big-button{
+  width: 20rem;
+  line-height: 3rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: $borderRadius;
+  color: $secondaryColor;
+  transition: all .2s ease ;
+}
+.join-button{
+  background-color: $mainColor;
+  border: 3px solid $mainColor;
+  
+    &:hover{
+      background-color: $midRed;
+      border: 3px solid $midRed;
+      font-size: 2.5rem;
+    }
+}
+.donate-button{
+  background-color: unset;
+  border: 3px solid $secondaryColor;
+  &:hover{
+    font-size: 2.5rem;
+    border-color: $midRed;
+  }
 }
 nav{
   position: sticky;
