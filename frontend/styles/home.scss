@@ -1,0 +1,68 @@
+.chimney{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    z-index: -1;
+    min-width: 100vw;
+    transform: rotateY(180deg);
+    background-blend-mode: overlay;
+    
+  }
+
+  // div for the background-blend-mode
+  .background{
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+  }
+  .landing-div{
+    width: 40%;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    text-align: end;
+    height: 100vh;
+    .landing-content{
+      margin-right: 10%;
+      display: flex;
+      height: fit-content;
+      flex-direction: column;
+      width: 70%;
+      .landing-button-div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        align-self: flex-end;
+      }
+      h1{
+        font-size: 8rem;
+        text-align: end;
+        line-height: 6rem;
+      }
+      button{
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        
+        &:nth-child(1){
+          background-color: #E91D0E;
+          border: 3px solid #E91D0E;
+        }&:nth-child(2){
+          background-color: unset;
+          border: 3px solid white;
+        }
+      }
+    }
+  }
+    #title{
+      color: white;
+      right: 20%;
+  }
+  
