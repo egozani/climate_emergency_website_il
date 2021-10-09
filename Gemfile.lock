@@ -41,8 +41,6 @@ GEM
       webrick (~> 1.7)
     bridgetown-paginate (0.21.4)
       bridgetown-core (= 0.21.4)
-    bridgetown-plausible-tag (0.0.1)
-      bridgetown (>= 0.15, < 2.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
     erubi (1.10.0)
@@ -108,7 +106,6 @@ PLATFORMS
 
 DEPENDENCIES
   bridgetown (~> 0.21.4)
-  bridgetown-plausible-tag (~> 0.0.1)
 
 BUNDLED WITH
    2.2.29
