@@ -32,3 +32,47 @@ button{
   font-family: 'Almoni', serif;
 
 }
+nav{
+  position: sticky;
+  top:0;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  align-items: center;
+  font-size: 3rem;
+  background-color: turquoise;
+  z-index: 2;
+  a{
+    height: 4rem;
+    padding: 0 1rem;
+    line-height: 4rem;
+    text-decoration: none;
+    color: black;
+    &:hover{
+      background-color: #FC6868;
+      color: $secondaryColor;
+    }
+    &:first-child{
+      background-color: $mainColor;
+    }
+    &:last-child:hover{
+      background-color: unset;
+      right: 0.75rem;
+      .logo{
+        margin-top: 0.25rem;
+        height:3.5rem;
+      }
+    }
+
+  }
+  .logo-link{
+    align-self: flex-end;
+    height: fit-content;
+    position: absolute;
+    right: 1rem;
+    .logo{
+      height: 3rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
