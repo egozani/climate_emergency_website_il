@@ -10,6 +10,7 @@
     min-width: 100vw;
     transform: rotateY(180deg);
     background-blend-mode: overlay;
+    object-fit: cover;
     
   }
 
@@ -18,6 +19,7 @@
     display: flex;
     flex-direction: column;
     isolation: isolate;
+
   }
   .landing-div{
     width: 40%;
@@ -114,6 +116,7 @@
     #about-crisis-content > div{
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 10rem;
       .about-crisis-image{
         width: 30rem;
@@ -145,4 +148,77 @@
         // max-width: 8rem;
       }
     }
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  @media screen and (max-width: 600px){
+    .chimney{
+      overflow: hidden;
+    transform: unset;
+    margin-left: -100%;
+    min-width: unset;
+      clip-path: inset(0 24.5% 0 0);
+    }
+    #registration-form{
+      display: none;
+    }
+    h1, #title{
+      font-size: 6rem;
+    }
+    h2{
+      font-size: 2rem !important;
+    }
+    p{
+      font-size: 1.5rem !important;
+    }
+    .big-button{
+      width: 12rem !important;
+    }
+    .background{
+      height: calc(100vh - 64px);
+    }
+    .landing-div{
+      // position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: unset;
+      text-align: right;
+      
+      .landing-content{
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      }
+    }
+    .landing-button-div{
+      margin-top: unset;
+      margin-bottom: 45%;
+      button{
+        margin-top: 1rem;
+      }
+    }
+    #about-crisis{
+      height: 400vw;
+
+    }
+    #about-crisis-content{
+      & > div{
+      &>div{
+        margin-bottom: 2rem !important;
+      }
+      margin-top: 3rem !important;
+      &:nth-child(2n+1){
+        flex-direction: column-reverse;
+      }
+      .about-crisis-image{
+        max-width: 80vw;
+        height: 50vw !important;
+      }
+    }
+  }
   }

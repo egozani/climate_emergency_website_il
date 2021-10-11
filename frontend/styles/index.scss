@@ -88,7 +88,7 @@ nav{
     line-height: 4rem;
     text-decoration: none;
     color: black;
-    &:first-child{
+    &:nth-child(2){
       background-color: $mainColor;
     }
     &:hover{
@@ -114,5 +114,30 @@ nav{
       height: 3rem;
       margin-top: 0.5rem;
     }
+  }
+  .menu-button{
+    display: none;
+    cursor: pointer;
+    fill: $mainColor;
+    &:hover{
+      fill: $secondaryColor;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  nav{
+    background-color: unset;
+    justify-content: space-between;
+    & > a:not(:last-child) {
+      display: none;
+    }
+    .menu-button{
+      display: unset;
+      margin-left: 1rem;
+    }
+  }
+  .logo{
+    margin-top: 1.5rem;
   }
 }
