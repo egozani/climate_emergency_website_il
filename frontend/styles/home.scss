@@ -1,29 +1,22 @@
-// $mainColor: #E91D0E;
-// $secondaryColor: white;
-// $borderRadius: 5px;
-.chimney{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: 100vh;
-    z-index: -1;
-    min-width: 100vw;
-    transform: rotateY(180deg);
-    background-blend-mode: overlay;
-    object-fit: cover;
-    
-  }
-
-  // div for the background-blend-mode
   .background{
     display: flex;
     flex-direction: column;
     isolation: isolate;
-
+    align-items: flex-start;
+    background-image: url('../../src/images/chimney.jpg');
+    background-position-y: -15rem;
+    transform: rotateY(180deg);
+    background-size: cover;
+    object-fit: cover;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    background-blend-mode: overlay;
+    background-color: #2E896A;
   }
   .landing-div{
+    transform: rotateY(180deg);
     width: 40%;
-    align-self: flex-end;
+    // align-self: flex-end;
     display: flex;
     align-items: center;
     text-align: end;
@@ -57,7 +50,7 @@
   }
   #registration-form{
     position: absolute;
-    bottom: -20%;
+    bottom: 0;
     left: 15%;
     display: flex;
     flex-direction: column;
@@ -72,6 +65,11 @@
     }
     input{
       margin-bottom: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+      &::placeholder{
+        text-align: right;
+      }
     }
   }
   #demands, #demonstrations, #about-crisis, #partners{
@@ -144,22 +142,24 @@
       justify-content: center;
       padding: 1rem 4rem;
       .partner-icon{
-        height: 5rem;
-        // max-width: 8rem;
+        max-height: 5rem;
+        max-width: 10rem;
       }
     }
   }
+  
   ::-webkit-scrollbar{
     display: none;
   }
   @media screen and (max-width: 600px){
-    .chimney{
-      overflow: hidden;
-    transform: unset;
-    margin-left: -100%;
-    min-width: unset;
-      clip-path: inset(0 24.5% 0 0);
-    }
+    // .chimney{
+    //   overflow: hidden;
+    // transform: unset;
+    // margin-left: -100%;
+    // min-width: unset;
+    //   // clip-path: inset(0 24.5% 0 0);
+    // }
+
     #registration-form{
       display: none;
     }
@@ -176,9 +176,15 @@
       width: 12rem !important;
     }
     .background{
-      height: calc(100vh - 64px);
+      // height: 100vh;
+      margin-top: -4rem;
+      padding-top: 4rem;
+      background-position-y: 50%;
+      background-position-x: 60%;
+      transform: rotateY(0deg);
     }
     .landing-div{
+      transform: rotateY(0deg);
       // position: absolute;
       width: 100%;
       height: 100%;
@@ -204,9 +210,11 @@
     }
     #about-crisis{
       height: 400vw;
+      width: 100vw;
 
     }
     #about-crisis-content{
+      width: 100vw !important;
       & > div{
       &>div{
         margin-bottom: 2rem !important;
@@ -218,7 +226,13 @@
       .about-crisis-image{
         max-width: 80vw;
         height: 50vw !important;
+        margin: 0 auto !important;
       }
     }
+    
+  }
+  #map{
+    width: 80%;
+    // height: auto;
   }
   }
