@@ -4,7 +4,6 @@ export default class extends Controller {
     static targets = ["form"]
     initialize() {
         this.isOpen = false
-        console.log(this.formTarget.display);
     }
     connect() {
         console.log("Hello, Stimulus!", this)

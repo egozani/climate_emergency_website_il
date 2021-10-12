@@ -124,6 +124,21 @@ nav{
     }
   }
 }
+#menu{
+  $menuWidth: calc(100vw - 64px);
+  display: none;
+  position: fixed;
+  right: 0;
+  top:0;
+  width: $menuWidth;
+  height: 100vh;
+  flex-direction: column;
+  background-color: $mainColor;
+  z-index: 6;
+  a{
+    width: $menuWidth;
+  }
+}
 
 @media screen and (max-width: 600px){
   nav{
@@ -140,4 +155,7 @@ nav{
   .logo{
     margin-top: 1.5rem;
   }
+}
+.open{
+  display: flex !important;
 }

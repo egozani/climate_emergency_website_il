@@ -1,3 +1,5 @@
+  $formWidth: 288px;  // 18rem in px (1rem = 16px)
+  // $formWidth: 18rem;  // 18rem in px (1rem = 16px)
   .background{
     display: flex;
     flex-direction: column;
@@ -56,7 +58,7 @@
     text-align: right;
     flex-direction: column;
     align-items: flex-end;
-    width: 18rem;
+    width: $formWidth;
     padding: 2rem;
     border-radius: $borderRadius;
     background-color: $mainColor;
@@ -78,8 +80,6 @@
       cursor: pointer;
       height: 20px;
       width: 20px;
-      &:hover{
-      }
     }
   }
   #demands, #demonstrations, #about-crisis, #partners{
@@ -161,6 +161,7 @@
   ::-webkit-scrollbar{
     display: none;
   }
+  
   @media screen and (max-width: 600px){
     // .chimney{
     //   overflow: hidden;
@@ -173,8 +174,12 @@
     #registration-form{
       display: none;
       position: fixed;
-      height: 50vh;
-      top: 34vh;
+      
+      // height: 50vh;
+      top: 25vh;
+      // right: calc(100vw - $formWidth) / 2;
+      right: calc(((100vw - $formWidth) / 2.0) + 10vw);
+
       bottom: unset;
       .close-button{
         display: unset !important;
@@ -255,8 +260,6 @@
     width: 80%;
     // height: auto;
   }
-  .open{
-    display: unset !important;
-  }
+  
   }
   
