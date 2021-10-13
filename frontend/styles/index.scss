@@ -1,161 +1,154 @@
 @import url("https://almoni.netlify.app/index.css");
-$body-background: #fafafa;
-$body-color: #444;
-$midRed: #FC6868;
-$mainColor: #E91D0E;
-$secondaryColor: white;
-$borderRadius: 5px;
-@import 'home.scss';
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "variables.scss";
+@import "mixins.scss";
+@import "home.scss";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  background: $body-background;
-  color: $body-color;
-  font-family: 'Almoni', serif;
-  overflow-x: hidden;
+	background: $body-background;
+	color: $body-color;
+	font-family: "Almoni", serif;
+	overflow-x: hidden;
+	@include desktop {
+	}
 }
 
-h1, nav, footer {
-  text-align: center;
+h1,
+nav,
+footer {
+	text-align: center;
 }
-// nav{
-//   position: fixed;
-//   background-color: transparent;
-// }
 
 main {
-  
-  // margin: 4rem auto;
-  // max-width: 60rem;
+	// margin: 4rem auto;
+	// max-width: 60rem;
+}
+a {
+	text-decoration: none;
+}
+button {
+	font-family: "Almoni", serif;
+	cursor: pointer;
+	margin-top: 2rem;
+	background-color: $secondaryColor;
+	border-radius: $borderRadius;
+	line-height: 1.5rem;
+	border: 2px solid $secondaryColor;
+	outline: none;
+}
+.big-button {
+	width: 20rem;
+	line-height: 3rem;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	border-radius: $borderRadius;
+	color: $secondaryColor;
+	transition: all 0.2s ease;
+}
+.join-button {
+	background-color: $mainColor;
+	border: 3px solid $mainColor;
 
+	&:hover {
+		background-color: $midRed;
+		border: 3px solid $midRed;
+		font-size: 2.5rem;
+	}
 }
-a{
-  text-decoration: none;
+.donate-button {
+	background-color: unset;
+	border: 3px solid $secondaryColor;
+	&:hover {
+		font-size: 2.5rem;
+		border-color: $midRed;
+	}
 }
-button{
-  font-family: 'Almoni', serif;
-  cursor: pointer;
-  margin-top: 2rem;
-  background-color: $secondaryColor;
-  border-radius: $borderRadius;
-  line-height: 1.5rem;
-  border: 2px solid $secondaryColor;
-  outline: none;
+nav {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	height: 4rem;
+	align-items: center;
+	font-size: 3rem;
+	background-color: turquoise;
+	z-index: 2;
+	a {
+		height: 4rem;
+		padding: 0 1rem;
+		line-height: 4rem;
+		text-decoration: none;
+		color: black;
+		&:nth-child(2) {
+			background-color: $mainColor;
+		}
+		&:hover {
+			background-color: $midRed;
+			color: $secondaryColor;
+		}
+		&:last-child:hover {
+			background-color: unset;
+			right: 0.75rem;
+			.logo {
+				margin-top: 0.25rem;
+				height: 3.5rem;
+			}
+		}
+	}
+	.logo-link {
+		align-self: flex-end;
+		height: fit-content;
+		position: absolute;
+		right: 1rem;
+		.logo {
+			height: 3rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.menu-button {
+		display: none;
+		cursor: pointer;
+		fill: $mainColor;
+		&:hover {
+			fill: $secondaryColor;
+		}
+	}
 }
-.big-button{
-  width: 20rem;
-  line-height: 3rem;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  border-radius: $borderRadius;
-  color: $secondaryColor;
-  transition: all .2s ease ;
-}
-.join-button{
-  background-color: $mainColor;
-  border: 3px solid $mainColor;
-  
-    &:hover{
-      background-color: $midRed;
-      border: 3px solid $midRed;
-      font-size: 2.5rem;
-    }
-}
-.donate-button{
-  background-color: unset;
-  border: 3px solid $secondaryColor;
-  &:hover{
-    font-size: 2.5rem;
-    border-color: $midRed;
-  }
-}
-nav{
-  position: sticky;
-  top:0;
-  display: flex;
-  justify-content: center;
-  height: 4rem;
-  align-items: center;
-  font-size: 3rem;
-  background-color: turquoise;
-  z-index: 2;
-  a{
-    height: 4rem;
-    padding: 0 1rem;
-    line-height: 4rem;
-    text-decoration: none;
-    color: black;
-    &:nth-child(2){
-      background-color: $mainColor;
-    }
-    &:hover{
-      background-color: $midRed;
-      color: $secondaryColor;
-    }
-    &:last-child:hover{
-      background-color: unset;
-      right: 0.75rem;
-      .logo{
-        margin-top: 0.25rem;
-        height:3.5rem;
-      }
-    }
-
-  }
-  .logo-link{
-    align-self: flex-end;
-    height: fit-content;
-    position: absolute;
-    right: 1rem;
-    .logo{
-      height: 3rem;
-      margin-top: 0.5rem;
-    }
-  }
-  .menu-button{
-    display: none;
-    cursor: pointer;
-    fill: $mainColor;
-    &:hover{
-      fill: $secondaryColor;
-    }
-  }
-}
-#menu{
-  $menuWidth: calc(100vw - 64px);
-  display: none;
-  position: fixed;
-  right: 0;
-  top:0;
-  width: $menuWidth;
-  height: 100vh;
-  flex-direction: column;
-  background-color: $mainColor;
-  z-index: 6;
-  a{
-    width: $menuWidth;
-  }
+#menu {
+	$menuWidth: calc(100vw - 64px);
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: $menuWidth;
+	height: 100vh;
+	flex-direction: column;
+	background-color: $mainColor;
+	z-index: 6;
+	a {
+		width: $menuWidth;
+	}
 }
 
-@media screen and (max-width: 600px){
-  nav{
-    background-color: unset;
-    justify-content: space-between;
-    & > a:not(:last-child) {
-      display: none;
-    }
-    .menu-button{
-      display: unset;
-      margin-left: 1rem;
-    }
-  }
-  .logo{
-    margin-top: 1.5rem;
-  }
+@media screen and (max-width: 600px) {
+	nav {
+		background-color: unset;
+		justify-content: space-between;
+		& > a:not(:last-child) {
+			display: none;
+		}
+		.menu-button {
+			display: unset;
+			margin-left: 1rem;
+		}
+	}
+	.logo {
+		margin-top: 1.5rem;
+	}
 }
-.open{
-  display: flex !important;
+.open {
+	display: flex !important;
 }

@@ -6,7 +6,6 @@ export default class extends Controller {
         this.isOpen = false
     }
     connect() {
-        console.log("Hello, Stimulus!", this)
     }
 
 
