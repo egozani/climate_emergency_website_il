@@ -74,8 +74,21 @@ nav {
 	height: 4rem;
 	align-items: center;
 	font-size: 3rem;
-	background-color: turquoise;
+
 	z-index: 2;
+	background-color: transparent;
+	justify-content: space-between;
+	& > a:not(:last-child) {
+		display: none;
+	}
+
+	@include desktop {
+		background-color: turquoise;
+		& > a:not(:last-child) {
+			display: block;
+		}
+	}
+
 	a {
 		height: 4rem;
 		padding: 0 1rem;
@@ -103,23 +116,36 @@ nav {
 		height: fit-content;
 		position: absolute;
 		right: 1rem;
+		display: none;
+		@include desktop {
+			display: block;
+		}
 		.logo {
 			height: 3rem;
 			margin-top: 0.5rem;
 		}
 	}
 	.menu-button {
-		display: none;
+		display: block;
 		cursor: pointer;
+		margin-left: 1rem;
 		fill: $mainColor;
-		&:hover {
+		background: none;
+		color: white;
+		border: none;
+		&:hover,
+		&:focus {
 			fill: $secondaryColor;
+		}
+
+		@include desktop {
+			display: none;
 		}
 	}
 }
 #menu {
 	$menuWidth: calc(100vw - 64px);
-	display: none;
+	display: flex;
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -128,27 +154,25 @@ nav {
 	flex-direction: column;
 	background-color: $mainColor;
 	z-index: 6;
+	transform: translateX(100%);
+	transition: 300ms transform;
+	&.open {
+		transform: translateX(0%);
+	}
+	@include desktop {
+		display: flex;
+		transform: translateX(0%);
+		flex-direction: row;
+		height: revert;
+		background: transparent;
+	}
 	a {
 		width: $menuWidth;
 	}
 }
 
 @media screen and (max-width: 600px) {
-	nav {
-		background-color: unset;
-		justify-content: space-between;
-		& > a:not(:last-child) {
-			display: none;
-		}
-		.menu-button {
-			display: unset;
-			margin-left: 1rem;
-		}
-	}
 	.logo {
 		margin-top: 1.5rem;
 	}
-}
-.open {
-	display: flex !important;
 }
