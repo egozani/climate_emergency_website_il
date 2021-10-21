@@ -40,7 +40,7 @@
         text-align: end;
         line-height: 6rem;
       }
-      
+
     }
   }
     #title{
@@ -157,11 +157,11 @@
       }
     }
   }
-  
+
   ::-webkit-scrollbar{
     display: none;
   }
-  
+
   @media screen and (max-width: 600px){
     // .chimney{
     //   overflow: hidden;
@@ -174,7 +174,7 @@
     #registration-form{
       display: none;
       position: fixed;
-      
+
       // height: 50vh;
       top: 25vh;
       // right: calc(100vw - $formWidth) / 2;
@@ -189,6 +189,7 @@
       font-size: 6rem;
     }
     #title{
+      padding-right: 1rem;
       width: 100vw;
     }
     h2{
@@ -216,7 +217,7 @@
       left: 0;
       right: unset;
       text-align: right;
-      
+
       .landing-content{
         margin-top: 0;
         width: 100%;
@@ -227,6 +228,7 @@
       }
     }
     .landing-button-div{
+      margin-right: 1rem;
       margin-top: unset;
       margin-bottom: 45%;
       button{
@@ -254,12 +256,11 @@
         margin: 0 auto !important;
       }
     }
-    
+
   }
   #map{
     width: 80%;
     // height: auto;
   }
-  
+
   }
-  

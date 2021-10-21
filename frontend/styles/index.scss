@@ -131,7 +131,7 @@ nav {
 		margin-left: 1rem;
 		fill: $mainColor;
 		background: none;
-		color: white;
+		color: $mainColor;
 		border: none;
 		&:hover,
 		&:focus {
@@ -175,4 +175,8 @@ nav {
 	.logo {
 		margin-top: 1.5rem;
 	}
+}
+
+.hidden {
+	display: none;
 }

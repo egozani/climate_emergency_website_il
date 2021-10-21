@@ -46,7 +46,7 @@ layout: home
                 </div>
                 <img class='about-crisis-image' src='./images/protest_pic_1.jpeg'/>
             </div>
-            <div>
+            <!-- <div>
                 <img class='about-crisis-image' src='./images/protest_pic_1.jpeg'/>
                 <div>
                     <h3>על המשבר</h3>
@@ -54,58 +54,19 @@ layout: home
                     הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
                     <a href='#registration-form'><button class='join-button big-button' data-action='click->home#openForm'>להצטרפות</button></a>
                 </div>
-            </div>
-            
+            </div> -->
         </div>
     </div>
-    <!-- <div id='partners'>
+    <div id='partners'>
         <div id='partners-content'>
             <h2>שותפים</h2>
             <div id='partner-icons'>
-            <img class='partner-icon' src='./images/partner-icons/permission_Heschel.png' />
-            <img class='partner-icon' src='./images/partner-icons/permission_ShomreiHabayit.png' />
-            <img class='partner-icon' src='./images/partner-icons/AnsheiHaiamHatichon.png' />
-            <img class='partner-icon' src='./images/partner-icons/BarKayma.png' />
-            <img class='partner-icon' src='./images/partner-icons/BeeSpot.png' />
-            <img class='partner-icon' src='./images/partner-icons/CitizensForTheEnvironment.png' />
-            <img class='partner-icon' src='./images/partner-icons/emaze.png' />
-            <img class='partner-icon' src='./images/partner-icons/ExtinctionRebellion.png' />
-            <img class='partner-icon' src='./images/partner-icons/FossilFreeIsrael.png' />
-            <img class='partner-icon' src='./images/partner-icons/GinotKehilatiotBeisrael.png' />
-            <img class='partner-icon' src='./images/partner-icons/Greenpeace.png' />
-            <img class='partner-icon' src='./images/partner-icons/HachevraLehaganatHateva.png' />
-            <img class='partner-icon' src='./images/partner-icons/HaigudHaisraeliLeadrichaleiNof.png' />
-            <img class='partner-icon' src='./images/partner-icons/HashomerHatzair.png' />
-            <img class='partner-icon' src='./images/partner-icons/Hayaar_Hanadiv.png' />
-            <img class='partner-icon' src='./images/partner-icons/HolkimBeshefaMehagina.png' />
-            <img class='partner-icon' src='./images/partner-icons/HorimLemaanHaaklim.png' />
-            <img class='partner-icon' src='./images/partner-icons/HugeiSayaruitKakal.png' />
-            <img class='partner-icon' src='./images/partner-icons/IgudRofeiBriutHatziburBeisrael.png' />
-            <img class='partner-icon' src='./images/partner-icons/Israel2050.png' />
-            <img class='partner-icon' src='./images/partner-icons/JerusalemGreenFund.png' />
-            <img class='partner-icon' src='./images/partner-icons/Kaima.png' />
-            <img class='partner-icon' src='./images/partner-icons/KehilatHashemesh.png' />
-            <img class='partner-icon' src='./images/partner-icons/KesefNaki.png' />
-            <img class='partner-icon' src='./images/partner-icons/Keshet.png' />
-            <img class='partner-icon' src='./images/partner-icons/LadaatTeva.png' />
-            <img class='partner-icon' src='./images/partner-icons/MegamaYeruka.png' />
-            <img class='partner-icon' src='./images/partner-icons/MetzilotHamazon.png' />
-            <img class='partner-icon' src='./images/partner-icons/Muslala.png' />
-            <img class='partner-icon' src='./images/partner-icons/NuniVefortuna.jpeg' />
-            <img class='partner-icon' src='./images/partner-icons/Ococean.png' />
-            <img class='partner-icon' src='./images/partner-icons/RamotfortheEnvironment.png' />
-            <img class='partner-icon' src='./images/partner-icons/RehovotShelEtzim.png' />
-            <img class='partner-icon' src='./images/partner-icons/RobinFood.png' />
-            <img class='partner-icon' src='./images/partner-icons/ShdulatYerushalaimBatKaima.png' />
-            <img class='partner-icon' src='./images/partner-icons/StrikeForFutureIsrael.png' />
-            <img class='partner-icon' src='./images/partner-icons/TeachersForClimate.png' />
-            <img class='partner-icon' src='./images/partner-icons/TheNaturalStep.png' />
-            <img class='partner-icon' src='./images/partner-icons/TransitionIsrael.png' />
-            <img class='partner-icon' src='./images/partner-icons/UptoUs.png' />
-            <img class='partner-icon' src='./images/partner-icons/Zalul.png' />
+              {% for partner in site.data.partners %}
+                <img class='partner-icon' src='./images/partner-icons/{{partner.url}}' data-index={{ forloop.index }} />
+              {% endfor %}
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div id='demonstrations'>
      <iframe id='map' src="https://www.google.com/maps/d/embed?mid=12Z6M2Cry5ls2Wuy6rvgGQAu197V0wx-w" width="640" height="480"></iframe>
