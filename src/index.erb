@@ -30,39 +30,29 @@ template_engine: erb
 </div>
 
 
-<section class='demands'>
-    <div class='demands-content'>
-        <h2>אנו דורשים הכרזה <br />על מצב חירום אקלימי אקולוגי<br />עד פברואר 2022</h2>
-        <p>הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט
+<section class='section section--demands'>
+        <h2 class='section__title'>
+            אנו דורשים הכרזה <br>
+            על מצב חירום <br>
+            אקלימי אקולוגי<br>
+            עד פברואר 2022
+        </h2>
+        <p class='section__text'>הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט
         הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
     <!-- <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> -->
-    </div>
-</section>
 
-<div id='about-crisis'>
-    <div id='about-crisis-content'>
-        <h2>על המשבר</h2>
-        <div>
-            <div>
-                <h3>על המשבר</h3>
-                <p>הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט
-                הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
-                <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a>
-            </div>
-            <img class='about-crisis-image' src='./images/protest_pic_1.jpeg'/>
+</section>
+<hr>    
+<section class='section section--about-crisis'>
+        <h2 class='section__title'>על המשבר</h2>
+        <div class='section__grid'>
+            <img class='section__image' src='./images/protest_pic_1.jpeg'/>
+            <h3 class='section__title section--grid-title'>על המשבר</h3>
+            <p class='section__text section--text-normal'>הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט
+            הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
+            <%# <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> %>
         </div>
-    </div>
-    <!-- <div id='partners'>
-        <div id='partners-content'>
-            <h2>שותפים</h2>
-            <div id='partner-icons' data-partner-size=" <%= site.data.partners.size %> ">
-              {% for partner in site.data.partners %}
-                <img class='partner-icon' src='./images/partner-icons/{{partner.url}}' data-index={{ forloop.index }} />
-              {% endfor %}
-            </div>
-        </div> -->
-    </div>
-</div>
+</section>
 <div id='partners'>
     <div id='partners-content'>
         <h2>שותפים</h2>
