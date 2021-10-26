@@ -64,6 +64,7 @@ button {
 .hidden {
 	display: none;
 }
+
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -251,7 +252,7 @@ button {
 		margin-top: 8rem;
 		margin-right: 4rem;
 	}
-	#partner-icons {
+	.partner-group {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;

@@ -57,12 +57,14 @@ template_engine: erb
         <div id='partners-content'>
             <h2>שותפים</h2>
             <div id='partner-icons' data-partner-size="<%= site.data.partners.size %>">
-              <% site.data.partners.each_with_index do |partner_group, index| %>
-              <div class="partner-group">
-                <% partner_group.first[1].each do |something| %>
-                  <img class='partner-icon' src='./images/partner-icons/<%= something.first[1] %>' data-index=<%= index + 1 %> />
-                <% end %>
-              </div>
+              <% index = 1 %>
+              <% site.data.partners.each do |partner_group| %>
+                <div class="partner-group">
+                  <% partner_group.first[1].each do |something| %>
+                    <img class='partner-icon' src='./images/partner-icons/<%= something.first[1] %>' data-index=<%= index %> />
+                    <% index += 1 %>
+                  <% end %>
+                </div>
               <% end %>
             </div>
         </div>
