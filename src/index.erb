@@ -42,7 +42,7 @@ template_engine: erb
     <!-- <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> -->
 
 </section>
-<hr>    
+<hr>
 <section class='section section--about-crisis'>
         <h2 class='section__title'>על המשבר</h2>
         <div class='section__grid'>
@@ -52,17 +52,22 @@ template_engine: erb
             הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
             <%# <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> %>
         </div>
-</section>
-<div id='partners'>
-    <div id='partners-content'>
-        <h2>שותפים</h2>
-        <div id='partner-icons'>
-            <!-- {% for partner in site.data.partners %}
-            <img class='partner-icon' src='./images/partner-icons/{{partner.url}}' data-index={{ forloop.index }} />
-            {% endfor %} -->
+    </div>
+    <div id='partners'>
+        <div id='partners-content'>
+            <h2>שותפים</h2>
+            <div id='partner-icons' data-partner-size="<%= site.data.partners.size %>">
+              <% site.data.partners.each_with_index do |partner_group, index| %>
+              <div class="partner-group">
+                <% partner_group.first[1].each do |something| %>
+                  <img class='partner-icon' src='./images/partner-icons/<%= something.first[1] %>' data-index=<%= index + 1 %> />
+                <% end %>
+              </div>
+              <% end %>
+            </div>
         </div>
     </div>
-  </div>
+</div>
 
   <!-- <div id='demonstrations'>
    <iframe id='map' src="https://www.google.com/maps/d/embed?mid=12Z6M2Cry5ls2Wuy6rvgGQAu197V0wx-w" width="640" height="480"></iframe>

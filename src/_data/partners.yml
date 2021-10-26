@@ -1,41 +1,48 @@
-- url: permission_Heschel.png
-- url: permission_ShomreiHabayit.png
-- url: AnsheiHaiamHatichon.png
-- url: BarKayma.png
-- url: emaze.png
-- url: ExtinctionRebellion.png
-- url: FossilFreeIsrael.png
-- url: GinotKehilatiotBeisrael.png
-- url: HaigudHaisraeliLeadrichaleiNof.png
-- url: HashomerHatzair.png
-- url: Hayaar_Hanadiv.png
-- url: HolkimBeshefaMehagina.png
-- url: HorimLemaanHaaklim.png
-- url: HugeiSayaruitKakal.png
-- url: IgudRofeiBriutHatziburBeisrael.png
-- url: KehilatHashemesh.png
-- url: KesefNaki.png
-- url: RehovotShelEtzim.png
-- url: RobinFood.png
-- url: StrikeForFutureIsrael.png
-- url: TeachersForClimate.png
-- url: TheNaturalStep.png
-- url: TransitionIsrael.png
-- url: Zalul.png
-- url: BeeSpot.png
-- url: CitizensForTheEnvironment.png
-- url: Greenpeace.png
-- url: HachevraLehaganatHateva.png
-- url: Israel2050.png
-- url: JerusalemGreenFund.png
-- url: Kaima.png
-- url: Keshet.png
-- url: LadaatTeva.png
-- url: MegamaYeruka.png
-- url: MetzilotHamazon.png
-- url: Muslala.png
-- url: NuniVefortuna.jpeg
-- url: Ococean.png
-- url: RamotfortheEnvironment.png
-- url: ShdulatYerushalaimBatKaima.png
-- url: UptoUs.png
+- partner_group:
+  - url: permission_Heschel.png
+  - url: permission_ShomreiHabayit.png
+  - url: AnsheiHaiamHatichon.png
+  - url: BarKayma.png
+  - url: emaze.png
+  - url: ExtinctionRebellion.png
+- partner_group:
+  - url: FossilFreeIsrael.png
+  - url: GinotKehilatiotBeisrael.png
+  - url: HaigudHaisraeliLeadrichaleiNof.png
+  - url: HashomerHatzair.png
+  - url: Hayaar_Hanadiv.png
+  - url: HolkimBeshefaMehagina.png
+- partner_group:
+  - url: HorimLemaanHaaklim.png
+  - url: HugeiSayaruitKakal.png
+  - url: IgudRofeiBriutHatziburBeisrael.png
+  - url: KehilatHashemesh.png
+  - url: KesefNaki.png
+  - url: RehovotShelEtzim.png
+- partner_group:
+  - url: RobinFood.png
+  - url: StrikeForFutureIsrael.png
+  - url: TeachersForClimate.png
+  - url: TheNaturalStep.png
+  - url: TransitionIsrael.png
+  - url: Zalul.png
+- partner_group:
+  - url: BeeSpot.png
+  - url: CitizensForTheEnvironment.png
+  - url: Greenpeace.png
+  - url: HachevraLehaganatHateva.png
+  - url: Israel2050.png
+  - url: JerusalemGreenFund.png
+- partner_group:
+  - url: Kaima.png
+  - url: Keshet.png
+  - url: LadaatTeva.png
+  - url: MegamaYeruka.png
+  - url: MetzilotHamazon.png
+  - url: Muslala.png
+- partner_group:
+  - url: NuniVefortuna.jpeg
+  - url: Ococean.png
+  - url: RamotfortheEnvironment.png
+  - url: ShdulatYerushalaimBatKaima.png
+  - url: UptoUs.png
