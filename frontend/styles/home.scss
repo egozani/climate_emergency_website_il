@@ -1,52 +1,39 @@
-.background {
+.hero {
 	display: flex;
 	flex-direction: column;
 	isolation: isolate;
 	align-items: flex-start;
 	background-image: url("../../src/images/chimney.jpg");
-	background-position-y: -15rem;
-	transform: rotateY(180deg);
 	background-size: cover;
-	object-fit: cover;
+	background-position: 60%;
+	// object-fit: cover;
 	height: calc(100vh - 64px);
 	width: 100vw;
 	background-blend-mode: overlay;
 	background-color: #2e896a;
-}
-.landing-div {
-	transform: rotateY(180deg);
-	width: 40%;
-	// align-self: flex-end;
-	display: flex;
-	align-items: center;
-	text-align: end;
-	height: calc(100vh - 64px); // 100vh - 4rem of nav
-	.landing-content {
-		// margin-right: 10%;
+	&-content {
 		display: flex;
-		height: fit-content;
 		flex-direction: column;
+		justify-content: center;
 		width: 70%;
-		.landing-button-div {
-			display: flex;
-			flex-direction: column;
-			margin-top: 4rem;
-			align-self: flex-end;
-		}
-		h1 {
-			font-size: 8rem;
-			text-align: end;
-			line-height: 6rem;
-		}
+		padding-inline-start: 1rem;
+		height: 100%;
+	}
+	&-title {
+		color: var(--secondaryColor);
+		font-size: 8rem;
+		line-height: 0.6;
+	}
+	&-buttons {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+		gap: 1rem;
+		// margin-top: 4rem;
+		// align-self: flex-end;
 	}
 }
-#title {
-	color: var(--secondaryColor);
-	right: 20%;
-}
-h2 {
-	font-size: 3rem;
-}
+
 #registration-form {
 	position: absolute;
 	bottom: 0;
