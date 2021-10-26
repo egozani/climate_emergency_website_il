@@ -41,7 +41,7 @@ export default class extends Controller {
           icon.classList.remove("fade")
         }
       });
-      if (batch > document.querySelector("#partner-icons").dataset.partnerSize - 1) {
+      if (batch > document.querySelector("#partner-icons").dataset.partnerSize - 2) {
         batch = 0
       }
       else {
