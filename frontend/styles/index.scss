@@ -75,8 +75,9 @@ button {
 	// object-fit: cover;
 	height: calc(100vh - 64px);
 	width: 100vw;
-	background-blend-mode: overlay;
 	background-color: #2e896a;
+	background-blend-mode: overlay;
+	backdrop-filter: blur(4px);
 	&-content {
 		display: flex;
 		flex-direction: column;
@@ -141,23 +142,26 @@ button {
 		font-size: 2.4rem;
 		line-height: 0.9;
 		margin-bottom: 4rem;
+		&--small {
+			font-size: 2rem;
+			margin-block: 1.5rem;
+		}
 	}
 	&__text {
 		font-size: 1.5rem;
 		font-family: "Alef", sans-serif;
 		font-weight: bold;
 		line-height: 1.3;
+		&--normal {
+			font-weight: normal;
+		}
 	}
-	&__grid {
+	&__grid:not(:last-of-type) {
+		margin-bottom: 2rem;
 	}
-	&--text-normal {
-		font-weight: normal;
-	}
-	&--grid-title {
-		font-size: 2rem;
-		margin-bottom: 1.5rem;
-	}
-	&__image {
+
+	&--about-crisis {
+		background-image: url("../../src/images/about-crisis.png");
 	}
 }
 
