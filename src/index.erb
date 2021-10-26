@@ -1,5 +1,6 @@
 ---
 layout: home
+template_engine: erb
 ---
 
 
@@ -50,13 +51,14 @@ layout: home
             </div>
             <img class='about-crisis-image' src='./images/protest_pic_1.jpeg'/>
         </div>
-        <!-- <div>
-            <img class='about-crisis-image' src='./images/protest_pic_1.jpeg'/>
-            <div>
-                <h3>על המשבר</h3>
-                <p>הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט
-                הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט<br />הרטמה תאז המל לע טסקט הרטמה תאז המל לע טסקט</p>
-                <a href='#registration-form'><button class='join-button big-button' data-action='click->home#openForm'>להצטרפות</button></a>
+    </div>
+    <!-- <div id='partners'>
+        <div id='partners-content'>
+            <h2>שותפים</h2>
+            <div id='partner-icons' data-partner-size=" <%= site.data.partners.size %> ">
+              {% for partner in site.data.partners %}
+                <img class='partner-icon' src='./images/partner-icons/{{partner.url}}' data-index={{ forloop.index }} />
+              {% endfor %}
             </div>
         </div> -->
     </div>
@@ -65,13 +67,13 @@ layout: home
     <div id='partners-content'>
         <h2>שותפים</h2>
         <div id='partner-icons'>
-            {% for partner in site.data.partners %}
+            <!-- {% for partner in site.data.partners %}
             <img class='partner-icon' src='./images/partner-icons/{{partner.url}}' data-index={{ forloop.index }} />
-            {% endfor %}
+            {% endfor %} -->
         </div>
     </div>
-</div>
+  </div>
 
-<div id='demonstrations'>
-    <iframe id='map' src="https://www.google.com/maps/d/embed?mid=12Z6M2Cry5ls2Wuy6rvgGQAu197V0wx-w" width="640" height="480"></iframe>
-</div>
+  <!-- <div id='demonstrations'>
+   <iframe id='map' src="https://www.google.com/maps/d/embed?mid=12Z6M2Cry5ls2Wuy6rvgGQAu197V0wx-w" width="640" height="480"></iframe>
+  </div> -->

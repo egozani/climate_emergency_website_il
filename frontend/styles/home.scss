@@ -146,9 +146,60 @@
 	}
 }
 
-// ::-webkit-scrollbar {
-// 	display: none;
-// }
+  #about-crisis{
+    align-items: center;
+    height: 200vh;
+    background-image: url('../../src/images/about-crisis-background.png');
+    h2{
+      margin-top: 8rem;
+    }
+    #about-crisis-content{
+      height: 100%;
+      width: 70%;
+    }
+    #about-crisis-content > div{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10rem;
+      .about-crisis-image{
+        width: 30rem;
+        height: 22rem;
+        margin-right: 2rem;
+      }
+      &:nth-child(2n){
+        div{
+        margin-right: 2rem;
+       }
+       .about-crisis-image{
+         margin-right: unset;
+       }
+      }
+    }
+  }
+  #partners{
+    h2{
+      margin-top: 8rem;
+      margin-right: 4rem;
+    }
+    #partner-icons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 80vw;
+      margin-inline: auto;
+      gap: 1rem;
+      .partner-icon{
+        width: 40%;
+        height: 50%;
+        transition: 0.4s opacity;
+        opacity: 0;
+        &.fade {
+          opacity: 1;
+        }
+      }
+    }
+  }
 
 @media screen and (max-width: 600px) {
 	// .chimney{
