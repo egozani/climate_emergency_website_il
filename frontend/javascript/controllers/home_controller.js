@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+let batch = 1
 
 export default class extends Controller {
     static targets = ["form"]
@@ -6,7 +7,8 @@ export default class extends Controller {
         this.isOpen = false
     }
     connect() {
-      this.hidePartners()
+      // this.hidePartners()
+      setInterval( () => this.switchIcons() , 3000)
     }
 
 
@@ -20,15 +22,30 @@ export default class extends Controller {
     }
 
     hidePartners() {
-      console.log("hidePartners");
       const icons = document.querySelectorAll(".partner-icon");
-      console.log(icons);
       icons.forEach((icon, i) => {
         if (parseInt(icon.dataset.index) > 6) {
-          console.log("hidden");
           icon.classList.add("hidden")
         }
       });
+    }
 
+    switchIcons() {
+      const icons = document.querySelectorAll(".partner-icon");
+      console.log(batch);
+      icons.forEach((icon, i) => {
+        if (parseInt(icon.dataset.index) > (batch * 6) && parseInt(icon.dataset.index) <= ((batch + 1) * 6)) {
+          icon.classList.add("fade")
+        }
+        else {
+          icon.classList.remove("fade")
+        }
+      });
+      if (batch > document.querySelector("#partner-icons").dataset.partnerSize / 6 - 1) {
+        batch = 0
+      }
+      else {
+        batch += 1;
+      }
     }
 }
