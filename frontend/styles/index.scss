@@ -1,42 +1,30 @@
 @import url("https://almoni.netlify.app/index.css");
+@import "resets.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "home.scss";
+@import "nav.scss";
+
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 }
 body {
-	background: $body-background;
-	color: $body-color;
+	background: var(--body-background);
+	color: var(--body-color);
 	font-family: "Almoni", serif;
 	overflow-x: hidden;
+
 	@include desktop {
 	}
 }
 
-h1,
-nav,
-footer {
-	text-align: center;
-}
-
-main {
-	// margin: 4rem auto;
-	// max-width: 60rem;
-}
-a {
-	text-decoration: none;
-}
 button {
-	font-family: "Almoni", serif;
 	cursor: pointer;
 	margin-top: 2rem;
-	background-color: $secondaryColor;
-	border-radius: $borderRadius;
+	background-color: var(--secondaryColor);
+	border-radius: var(--borderRadius);
 	line-height: 1.5rem;
-	border: 2px solid $secondaryColor;
+	border: 2px solid var(--secondaryColor);
 	outline: none;
 }
 .big-button {
@@ -44,115 +32,39 @@ button {
 	line-height: 3rem;
 	font-size: 2rem;
 	margin-bottom: 0.5rem;
-	border-radius: $borderRadius;
-	color: $secondaryColor;
+	border-radius: var(--borderRadius);
+	color: var(--secondaryColor);
 	transition: all 0.2s ease;
 }
 .join-button {
-	background-color: $mainColor;
-	border: 3px solid $mainColor;
+	background-color: var(--mainColor);
+	border: 3px solid var(--mainColor);
 
 	&:hover {
-		background-color: $midRed;
-		border: 3px solid $midRed;
+		background-color: var(--midRed);
+		border: 3px solid var(--midRed);
 		font-size: 2.5rem;
 	}
 }
 .donate-button {
 	background-color: unset;
-	border: 3px solid $secondaryColor;
+	border: 3px solid var(--secondaryColor);
 	&:hover {
 		font-size: 2.5rem;
-		border-color: $midRed;
+		border-color: var(--midRed);
 	}
 }
-nav {
-	position: sticky;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	height: 4rem;
-	align-items: center;
-	font-size: 3rem;
 
-	z-index: 2;
-	background-color: transparent;
-	justify-content: space-between;
-	& > a:not(:last-child) {
-		display: none;
-	}
-
-	@include desktop {
-		background-color: turquoise;
-		& > a:not(:last-child) {
-			display: block;
-		}
-	}
-
-	a {
-		height: 4rem;
-		padding: 0 1rem;
-		line-height: 4rem;
-		text-decoration: none;
-		color: black;
-		&:nth-child(2) {
-			background-color: $mainColor;
-		}
-		&:hover {
-			background-color: $midRed;
-			color: $secondaryColor;
-		}
-		&:last-child:hover {
-			background-color: unset;
-			right: 0.75rem;
-			.logo {
-				margin-top: 0.25rem;
-				height: 3.5rem;
-			}
-		}
-	}
-	.logo-link {
-		align-self: flex-end;
-		height: fit-content;
-		position: absolute;
-		right: 1rem;
-		display: none;
-		@include desktop {
-			display: block;
-		}
-		.logo {
-			height: 3rem;
-			margin-top: 0.5rem;
-		}
-	}
-	.menu-button {
-		display: block;
-		cursor: pointer;
-		margin-left: 1rem;
-		fill: $mainColor;
-		background: none;
-		color: $mainColor;
-		border: none;
-		&:hover,
-		&:focus {
-			fill: $secondaryColor;
-		}
-
-		@include desktop {
-			display: none;
-		}
-	}
-}
 #menu {
-	$menuWidth: calc(100vw - 64px);
+	--menuWidth: calc(100vw - 64px);
 	display: flex;
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: $menuWidth;
+	width: var(--menuWidth);
 	height: 100vh;
 	flex-direction: column;
-	background-color: $mainColor;
+	background-color: var(--mainColor);
 	z-index: 6;
 	transform: translateX(100%);
 	transition: 300ms transform;
@@ -167,7 +79,7 @@ nav {
 		background: transparent;
 	}
 	a {
-		width: $menuWidth;
+		width: var(--menuWidth);
 	}
 }
 

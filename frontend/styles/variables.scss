@@ -1,6 +1,9 @@
-$body-background: #fafafa;
-$body-color: #444;
-$midRed: #fc6868;
-$mainColor: #e91d0e;
-$secondaryColor: white;
-$borderRadius: 5px;
+:root {
+	--body-background: #e8fdf7;
+	--body-color: #444;
+	--midRed: #fc6868;
+	--mainColor: #e91d0e;
+	--secondaryColor: white;
+	--borderRadius: 5px;
+	--formWidth: 288px;
+}

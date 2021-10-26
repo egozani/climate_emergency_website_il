@@ -1,0 +1,77 @@
+nav {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	height: 4rem;
+	align-items: center;
+	font-size: 3rem;
+
+	z-index: 2;
+	background-color: transparent;
+	justify-content: flex-end;
+	& > a:not(:last-child) {
+		display: none;
+	}
+
+	@include desktop {
+		background-color: turquoise;
+		& > a:not(:last-child) {
+			display: block;
+		}
+	}
+
+	a {
+		height: 4rem;
+		padding: 0 1rem;
+		line-height: 4rem;
+		text-decoration: none;
+		color: black;
+		&:nth-child(2) {
+			background-color: var(--mainColor);
+		}
+		&:hover {
+			background-color: var(--midRed);
+			color: var(--secondaryColor);
+		}
+		&:last-child:hover {
+			background-color: unset;
+			right: 0.75rem;
+			.logo {
+				margin-top: 0.25rem;
+				height: 3.5rem;
+			}
+		}
+	}
+	.logo-link {
+		align-self: flex-end;
+		height: fit-content;
+		position: absolute;
+		right: 1rem;
+		display: none;
+		@include desktop {
+			display: block;
+		}
+		.logo {
+			height: 3rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.menu-button {
+		display: block;
+		cursor: pointer;
+		margin-left: 1rem;
+		fill: var(--mainColor);
+		background: none;
+		color: var(--mainColor);
+		border: none;
+		&:hover,
+		&:focus {
+			fill: var(--secondaryColor);
+		}
+
+		@include desktop {
+			display: none;
+		}
+	}
+}
