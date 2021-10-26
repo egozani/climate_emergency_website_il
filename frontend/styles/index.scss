@@ -252,20 +252,24 @@ button {
 		margin-top: 8rem;
 		margin-right: 4rem;
 	}
-	.partner-group {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		width: 80vw;
-		margin-inline: auto;
-		gap: 1rem;
-		.partner-icon {
-			width: 40%;
-			height: 50%;
-			transition: 0.4s opacity;
-			opacity: 0;
-			&.fade {
-				opacity: 1;
+	#partner-icons {
+		position: relative;
+		.partner-group {
+			position: absolute;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			width: 80vw;
+			margin-inline: auto;
+			gap: 1rem;
+			.partner-icon {
+				width: 40%;
+				height: 50%;
+				transition: 0.4s opacity;
+				opacity: 0;
+				&.fade {
+					opacity: 1;
+				}
 			}
 		}
 	}
