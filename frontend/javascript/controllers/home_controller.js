@@ -8,7 +8,8 @@ export default class extends Controller {
     }
     connect() {
       // this.hidePartners()
-      setInterval( () => this.switchIcons() , 3000)
+     setInterval( () => this.switchIcons() , 3000)
+    //  this.switchIcons()
     }
 
 
@@ -41,7 +42,7 @@ export default class extends Controller {
           icon.classList.remove("fade")
         }
       });
-      if (batch > document.querySelector("#partner-icons").dataset.partnerSize - 2) {
+      if (batch > document.querySelector(".section--partners__content").dataset.partnerSize - 2) {
         batch = 0
       }
       else {

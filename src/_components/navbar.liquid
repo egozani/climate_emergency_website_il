@@ -1,17 +1,19 @@
-<nav data-controller="navbar">
-  <button class="menu-button" data-action="click->navbar#toggleMenu" aria-label="open menu">
+<nav class="navbar" data-controller="navbar">
+  <button class="navbar__btn menu-button" data-action="click->navbar#toggleMenu" aria-label="open menu">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
     </svg>
   </button>
-<div id="menu" data-navbar-target="menu">
-  <a href="#registration-form" data-action="click->navbar#toggleMenu">הצטרפות</a>
-  <a href="#demonstrations" data-action="click->navbar#toggleMenu">הפגנות</a>
-  <a href="#partners" data-action="click->navbar#toggleMenu">שותפים</a>
-  <a href="#on-crisis" data-action="click->navbar#toggleMenu">על המשבר</a>
-  <a href="#demands" data-action="click->navbar#toggleMenu">דרישות</a>
-  <a class='logo-link' href="/">
-    <img class='logo' src='../images/logo.png' />
-    </a>
+  <div class="navbar__menu" data-navbar-target="menu">
+  <a class='navbar__link navbar__link--logo' href="/">
+    <img src='../images/climate-logo.svg' />
+  </a>
+  <div class="navbar__links">
+    <a class="navbar__link" href="#demands" data-action="click->navbar#toggleMenu">דרישות</a>
+    <a class="navbar__link" href="#about-crisis" data-action="click->navbar#toggleMenu">על המשבר</a>
+    <a class="navbar__link" href="#partners" data-action="click->navbar#toggleMenu">שותפים</a>
+    <a class="navbar__link" href="#map" data-action="click->navbar#toggleMenu">הפגנות</a>
+    <a class="navbar__link navbar__link--red" href="#registration-form" data-action="click->navbar#toggleMenu">הצטרפות</a>
+  </div>
 </div>
 </nav>

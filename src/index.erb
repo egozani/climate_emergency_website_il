@@ -4,7 +4,7 @@ template_engine: erb
 ---
 
 
-<section class='hero' >
+<section class='hero' id='hero' >
     <div class='hero-content'>
         <h1 class='hero-title'>מצב חירום<br />עכשיו</h1>
         <div class='hero-buttons'>
@@ -15,7 +15,7 @@ template_engine: erb
 </section>
 
 
-<div id='registration-form' data-home-target='form'>
+<div class="form" id='registration-form' data-home-target='form'>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close-button" data-action="click->home#closeForm" viewBox="0 0 16 16">
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
     </svg>
@@ -30,7 +30,7 @@ template_engine: erb
 </div>
 
 
-<section class='section section--demands'>
+<section class='section section--demands' id='demands'>
         <h2 class='section__title'>
             אנו דורשים הכרזה <br>
             על מצב חירום <br>
@@ -44,7 +44,7 @@ template_engine: erb
     <!-- <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> -->
 
 </section>
-<section class='section section--about-crisis'>
+<section class='section section--about-crisis' id='about-crisis'>
         <h2 class='section__title'>על המשבר</h2>
         <div class='section__grid'>
             <img class='section__image' src='./images/protest_pic_1.jpeg'/>
@@ -69,25 +69,24 @@ template_engine: erb
 			הצטרפו אלינו ולשותפינו בתנועות הסביבתיות במאבק זה </p>
             <%# <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> %>
         </div>
-    </div>
-    <div id='partners'>
-        <div id='partners-content'>
-            <h2>שותפים</h2>
-            <div id='partner-icons' data-partner-size="<%= site.data.partners.size %>">
-              <% index = 1 %>
-              <% site.data.partners.each do |partner_group| %>
-                <div class="partner-group">
-                  <% partner_group.first[1].each do |something| %>
-                    <img class='partner-icon' src='./images/partner-icons/<%= something.first[1] %>' data-index=<%= index %> />
-                    <% index += 1 %>
-                  <% end %>
-                </div>
-              <% end %>
+</section>
+<section class='section section--partners' id="partners">
+        <h2 class='section__title'>שותפים</h2>
+        <div class="section--partners__content" data-partner-size="<%= site.data.partners.size %>">
+            <% index = 1 %>
+            <% site.data.partners.each do |partner_group| %>
+            <div class="partner-group">
+                <% partner_group.first[1].each do |something| %>
+                <div class="partner-icon" style="background-image: url(./images/partner-icons/<%= something.first[1] %>);" data-index=<%= index %>></div>
+                <% index += 1 %>
+                <% end %>
             </div>
+            <% end %>
         </div>
-    </div>
-</div>
+</section>
 
-<!-- <div id='demonstrations'>
+<section class='section section--map' id="map">
  <iframe id='map' src="https://www.google.com/maps/d/embed?mid=12Z6M2Cry5ls2Wuy6rvgGQAu197V0wx-w" width="640" height="480"></iframe>
-</div> -->
+</section>
+
+
