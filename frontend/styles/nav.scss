@@ -1,64 +1,54 @@
-nav {
+.navbar {
 	position: fixed;
 	width: 100%;
 	top: 0;
 	display: flex;
 	justify-content: center;
-	height: 4rem;
 	align-items: center;
 	font-size: 3rem;
 
-	z-index: 2;
+	z-index: 200;
 	background-color: transparent;
 	justify-content: flex-end;
-	& > a:not(:last-child) {
-		display: none;
-	}
 
 	@include desktop {
-		background-color: turquoise;
-		& > a:not(:last-child) {
-			display: block;
-		}
+		font-size: 2rem;
 	}
 
-	a {
-		height: 4rem;
+	&__link {
 		padding: 0 1rem;
-		line-height: 4rem;
 		text-decoration: none;
 		color: black;
-		&:nth-child(2) {
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		@include desktop {
+			padding-block: 0.3rem;
+		}
+		&--red {
 			background-color: var(--mainColor);
 		}
 		&:hover {
 			background-color: var(--midRed);
 			color: var(--secondaryColor);
 		}
-		&:last-child:hover {
-			background-color: unset;
-			right: 0.75rem;
-			.logo {
-				margin-top: 0.25rem;
-				height: 3.5rem;
+		&--logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include desktop {
+				// width: 33%;
+			}
+			img {
+				height: 5rem;
+				@include desktop {
+					height: 4rem;
+				}
 			}
 		}
 	}
-	.logo-link {
-		align-self: flex-end;
-		height: fit-content;
-		position: absolute;
-		right: 1rem;
-		display: none;
-		@include desktop {
-			display: block;
-		}
-		.logo {
-			height: 3rem;
-			margin-top: 0.5rem;
-		}
-	}
-	.menu-button {
+	&__btn {
 		display: block;
 		cursor: pointer;
 		margin-left: 1rem;
@@ -75,31 +65,41 @@ nav {
 			display: none;
 		}
 	}
-}
-#menu {
-	--menuWidth: calc(100vw - 64px);
-	display: flex;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: var(--menuWidth);
-	height: 100vh;
-	flex-direction: column;
-	background-color: var(--mainColor);
-	z-index: 6;
-	transform: translateX(100%);
-	transition: 300ms transform;
-	&.open {
-		transform: translateX(0%);
-	}
-	@include desktop {
-		display: flex;
-		transform: translateX(0%);
-		flex-direction: row;
-		height: revert;
-		background: transparent;
-	}
-	a {
+	&__menu {
+		--menuWidth: calc(100vw - 64px);
+
+		position: fixed;
+		right: 0;
+		top: 0;
 		width: var(--menuWidth);
+		height: 100vh;
+
+		background-color: var(--mainColor);
+		z-index: 6;
+		transform: translateX(100%);
+		transition: 300ms transform;
+		&.open {
+			transform: translateX(0%);
+		}
+		@include desktop {
+			padding-inline: var(--padding);
+			display: flex;
+			transform: translateX(0%);
+			flex-direction: row;
+			justify-content: space-between;
+			height: revert;
+			background: var(--body-background);
+			width: 100%;
+			// display: grid;
+			// grid-template-rows: 1fr;
+			// grid-template-columns: 4fr repeat(5, 1fr);
+		}
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		@include desktop {
+			flex-direction: row;
+		}
 	}
 }
