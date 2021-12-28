@@ -8,26 +8,11 @@ template_engine: erb
     <div class='hero-content'>
         <h1 class='hero-title'>מצב חירום<br />עכשיו</h1>
         <div class='hero-buttons'>
-            <a href='#registration-form'><button class='join-button big-button' data-action='click->home#openForm'>להצטרפות</button></a>
+            <a href='https://airtable.com/shrBQeUrr5LL4OUVE' target="_blank"><button class='join-button big-button' >להצטרפות</button></a>
             <button class='donate-button big-button'>לתרומה</button>
         </div>
     </div>
 </section>
-
-
-<div class="form" id='registration-form' data-home-target='form'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close-button" data-action="click->home#closeForm" viewBox="0 0 16 16">
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-    </svg>
-    <h2>הצטרפות</h2>
-    <label for='name' >שם</label>
-    <input name='name' />
-    <label for='mail' >מייל</label>
-    <input name='mail' />
-    <label for='address' >כתובת</label>
-    <input name='address' />
-    <button>שליחת פרטים</button>
-</div>
 
 
 <section class='section section--demands' id='demands'>
@@ -40,30 +25,29 @@ template_engine: erb
         <p class='section__text'>אנו ניצבים בפני התקופה הסוערת ביותר בהיסטוריה האנושית וכולנו יחד באותה הסירה.
 		עומדים בפנינו אתגרים אותם רק התחלנו לחוות בישראל, אך כבר באים לידי ביטוי ביתר שאת בשאר העולם.
 		להחלטותינו יש את הכוח להבטיח חיים בכבוד לנו ולדורות הבאים.
-    <!-- <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> -->
 
 </section>
 <section class='section section--about-crisis' id='about-crisis'>
         <h2 class='section__title'>על המשבר</h2>
         <div class='section__grid section__grid--reverse'>
-            <img class='section__image' src='./images/protest_pic_1.jpeg'/>
+            <img class='section__image' src='./images/burning-rainforest.webp'/>
             <p class='section__text section__text--normal'>אנו בעידן של שינויי אקלים מואצים  
 			הגוררים אירועי מזג אוויר ההולכים ומקצינים.
             לעת עתה האנושות מצליחה להתמודד עם האסונות,
 			אך מערכות אקולוגיות שלמות כבר נמצאות בתהליכי קריסה.
-			קריסה סביבתית וכאוס אקלימי מאיימים על סדרי חיינו 
-			נדרשות פעולות מיידיות לצורך התמודד עם משבר קיומי זה 
-			יחד נוכל להתעורר למציאות זו בנחישות, בחמלה, ומתוך תקווה לעתיד </p>
-            <%# <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> %>
+			קריסה סביבתית וכאוס אקלימי מאיימים על סדרי חיינו.
+			נדרשות פעולות מיידיות לצורך התמודד עם משבר קיומי זה.
+			יחד נוכל להתעורר למציאות זו בנחישות, בחמלה, ומתוך תקווה לעתיד.
+            <a href="https://tinyurl.com/climatelecturesinheb" target="_blank">למדו עוד</a>
+            </p>
         </div>
             <h3 class='section__title section__title--small'>קריאה לפעולה</h3>
         <div class='section__grid'>
-            <img class='section__image' src='./images/protest_pic_4.jpeg'/>
+            <img class='section__image' src='./images/protest.webp'/>
             <p class='section__text section__text--normal'>על כן, אנו קוראים להכרזה על מצב חירום אקלימי-אקולוגי,
 			ליצירת מנגנונים עם היכולת והסמכות להתמודד עמו באופן מקיף,
             ולתהליך שינוי תפיסתי נרחב בנושא בקרב מקבלי ההחלטות והציבור.
 			הצטרפו אלינו ולשותפינו בתנועות הסביבתיות במאבק זה </p>
-            <%# <a href='#registration-form'><button class='join-button big-button'  data-action='click->home#openForm'>להצטרפות</button></a> %>
         </div>
 </section>
 <section class='section section--partners' id="partners">
